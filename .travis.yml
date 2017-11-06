@@ -1,0 +1,16 @@
+language: node_js
+node_js:
+- 6.11.0
+- 8.1.1
+script:
+- npm test
+after_success:
+- bash <(curl -s https://codecov.io/bash)
+deploy:
+  provider: npm
+  email: lonly197@qq.com
+  api_key:
+    secure: c4/UujMjeKsjnsVbGvbULE6jFN0G/a+ZADT0rXkLfsgvYVqb3/rvAetgxcyKUoQ6KhVZAgJBv3c/4WoQcy006OlLO5eipwpp4LhZ2EE9qN8h1WwHzd7zKjcbx/LKEWF9J4uEVaR4X1wEWd5lFev+SwS5VaInBpoxLA3ikZXGVRqhdQ7fKec7TWbsyhzocleK4HLws8acAHtFAjRVrCg69JR+dPIgpJ+X33F55/cOKH8XaLJFQh3CQ2xtcg/IwfNpSAkyRmDf9QB5QJbux4oZ6rikxhf/VKrS7Ea6j78GQMFvpawhrT3xMttIFBOOn2b7Hhoy0aRl9NqplFOkbupJd+/kHu8jEyePlYtvR5+Nb0BZo58Csm8S/cwLFvQjstyQyZEjIAT51cIMLgL3FiL8yParJ3JuzV6uDsQKQyWyUaDBH7+07GzCLhJp0lnqxAoG/+DWoDYgJoN7clpHp+I87au0TB3/QiZXXBS/C/zVkhlAhG76vHgfggrVfJHt0F2Pr6SR/i1nfE0+6RmFULZCiEvgMa4pfD19US5a004afIGtzG00C5QjeQWwcESjmlu20teu1gc0TbK8YjDPj8Q1PS9EXKV7mXLWS0qDRwIV3tIQEzqqwT9O+eqJ6zRMS/URbQzqETN2pQk6kDtldWpsWz2sV3VzC8HjOJ4OJZRxpAY=
+  on:
+    tags: true
+    repo: lonly197/npm-project-template
