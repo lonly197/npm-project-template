@@ -1,6 +1,7 @@
 {
   "presets": [
     "stage-3",
-    "es2015-node6"
+    "es2015-node6",
+    "babili"
   ]
 }
